@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FAF7F2">
+    <title>Administrator sign in | Smart Healthcare</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="login-page admin-login">
+<main class="login-card">
+    <div class="brand-mark" aria-hidden="true">H</div>
+    <p class="eyebrow">Smart Healthcare</p>
+    <h1>Administrator sign in</h1>
+    <p class="login-description">Sign in to manage resources and review hospital operations.</p>
+
+    <form id="login-form" class="login-form" novalidate>
+        <div class="field">
+            <label for="username">Username</label>
+            <input class="form-control" id="username" name="username" autocomplete="username"
+                   required aria-describedby="username-error">
+            <span class="field-error" id="username-error"></span>
+        </div>
+        <div class="field">
+            <label for="password">Password</label>
+            <input class="form-control" id="password" name="password" type="password"
+                   autocomplete="current-password" required aria-describedby="password-error">
+            <span class="field-error" id="password-error"></span>
+        </div>
+        <p id="message" class="form-error" role="alert" aria-live="assertive"></p>
+        <button class="btn btn-primary btn-block" id="submit-button" type="submit">
+            <span id="button-label">Sign in</span>
+            <span class="spinner" id="loading-spinner" aria-hidden="true" hidden></span>
+        </button>
+    </form>
+    <p class="login-links">Staff member? <a href="/staff/login">Go to staff sign in</a></p>
+</main>
+<script src="/js/app.js" defer></script>
+<script src="/js/login.js" defer></script>
+</body>
+</html>

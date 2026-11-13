@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administrator Portal | Smart Healthcare</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="app-shell admin-shell" data-portal-role="ADMIN">
+    <aside class="sidebar" aria-label="Administrator navigation">
+        <a class="portal-brand" href="/admin/dashboard">
+            <span class="brand-mark" aria-hidden="true">H</span>
+            <span>Administrator Portal</span>
+        </a>
+        <div>
+            <p class="sidebar-label">Workspace</p>
+            <nav class="sidebar-nav" aria-label="Main navigation">
+                <a href="#dashboard" data-admin-nav="dashboard">Overview</a>
+                <a href="#predictions" data-admin-nav="predictions">Predictions</a>
+                <a href="#allocation" data-admin-nav="allocation">Allocation & transfers</a>
+                <a href="#departments" data-admin-nav="departments">Departments</a>
+                <a href="#doctors" data-admin-nav="doctors">Doctors</a>
+                <a href="#staff" data-admin-nav="staff">Manage staff</a>
+                <a href="#reports" data-admin-nav="reports">Reports</a>
+                <a href="#audit" data-admin-nav="audit">Audit log</a>
+            </nav>
+        </div>
+    </aside>
+    <div class="portal-main">
+        <header class="topbar">
+            <p class="topbar-title">Smart Healthcare Resource Allocation</p>
+            <div class="topbar-meta">
+                <time class="topbar-date" data-current-date></time>
+                <span class="topbar-user" data-current-user></span>
+                <button class="btn btn-secondary" type="button" data-logout="/admin/logout"
+                        data-login-url="/admin/login">Log out</button>
+            </div>
+        </header>
+        <main class="main-content" id="admin-content" tabindex="-1" aria-live="polite">
+            <div class="empty-state" aria-label="Loading administrator workspace">
+                <span class="spinner" aria-hidden="true"></span>
+                <span>Loading your workspace…</span>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+<script src="/js/app.js" defer></script>
+<script src="/js/admin.js" defer></script>
+</body>
+</html>
