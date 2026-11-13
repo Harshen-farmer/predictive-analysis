@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Staff Portal | Smart Healthcare</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="app-shell staff-shell" data-portal-role="STAFF">
+    <aside class="sidebar" aria-label="Staff navigation">
+        <a class="portal-brand" href="/staff/dashboard">
+            <span class="brand-mark" aria-hidden="true">H</span>
+            <span>Staff Portal</span>
+        </a>
+        <div>
+            <p class="sidebar-label">Workspace</p>
+            <nav class="sidebar-nav" aria-label="Main navigation">
+                <a href="#dashboard" data-staff-nav="dashboard">Overview</a>
+                <a href="#intake" data-staff-nav="intake">New patient visit</a>
+                <a href="#appointments" data-staff-nav="appointments">Today's appointments</a>
+                <a href="#beds" data-staff-nav="beds">Allocate bed</a>
+                <a href="#load" data-staff-nav="load">Today's load</a>
+            </nav>
+        </div>
+    </aside>
+    <div class="portal-main">
+        <header class="topbar">
+            <p class="topbar-title">Smart Healthcare Resource Allocation</p>
+            <div class="topbar-meta">
+                <time class="topbar-date" data-current-date></time>
+                <span class="topbar-user" data-current-user></span>
+                <button class="btn btn-secondary" type="button" data-logout="/staff/logout"
+                        data-login-url="/staff/login">Log out</button>
+            </div>
+        </header>
+        <main class="main-content" id="staff-content" tabindex="-1" aria-live="polite">
+            <div class="empty-state" aria-label="Loading staff workspace">
+                <span class="spinner" aria-hidden="true"></span>
+                <span>Loading your workspace…</span>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="/js/app.js" defer></script>
+<script src="/js/staff.js" defer></script>
+</body>
+</html>
